@@ -781,7 +781,7 @@
   }
   
   function processSteppedAreaData(chart) {
-    chart.data = processSeries(chart.data, chart.options, true);
+    chart.data = processSeries(chart.data, chart.options, false);
     renderChart("SteppedAreaChart", chart);
   }
 
