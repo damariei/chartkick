@@ -771,6 +771,11 @@
     chart.data = processSeries(chart.data, chart.options, false);
     renderChart("BarChart", chart);
   }
+  
+  function processSteppedAreaData(chart) {
+    chart.data = processSeries(chart.data, chart.options, false);
+    renderChart("SteppedAreaChart", chart);
+  }
 
   function processAreaData(chart) {
     chart.data = processSeries(chart.data, chart.options, true);
@@ -821,6 +826,9 @@
     },
     Timeline: function (element, dataSource, opts) {
       setElement(this, element, dataSource, opts, processTimelineData);
+    },
+    SteppedAreaChart: function (element, dataSource, opts) {
+      setElement(this, element, dataSource, opts, processSteppedAreaData);
     },
     charts: {}
   };
