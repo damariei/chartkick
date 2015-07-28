@@ -602,7 +602,7 @@
       this.renderSteppedAreaChart = function (chart) {
         waitForLoaded(function () {
           var options = jsOptions(chart.data, chart.options);
-          var data = createDataTable(chart.data, "timeofday");
+          var data = createDataTable(chart.data, "datetime");
           chart.chart = new google.visualization.SteppedAreaChart(chart.element);
           resize(function () {
             chart.chart.draw(data, options);
