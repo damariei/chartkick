@@ -723,9 +723,6 @@
     } else {
       opts.hideLegend = false;
     }
-    if (opts.discrete) {
-      time = false;
-    }
 
     // right format
     for (i = 0; i < series.length; i++) {
