@@ -598,6 +598,17 @@
           });
         });
       };
+      
+      this.renderSteppedAreaChart = function (chart) {
+        waitForLoaded(function () {
+          var options = jsOptions(chart.data, chart.options);
+          var data = createDataTable(chart.data, "string");
+          chart.chart = new google.visualization.SteppedAreaChart(chart.element);
+          resize(function () {
+            chart.chart.draw(data, options);
+          });
+        });
+      };
 
       this.renderBarChart = function (chart) {
         waitForLoaded(function () {
